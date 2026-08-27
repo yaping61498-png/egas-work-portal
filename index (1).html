@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#174a86">
+<title>EGAS 工作入口</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+  background:#f3f6fa;
+  color:#17253a;
+}
+.header{
+  background:linear-gradient(135deg,#123f78,#1d5da0);
+  color:white;
+  text-align:center;
+  padding:42px 20px 48px;
+  border-radius:0 0 42px 42px;
+  box-shadow:0 8px 24px rgba(20,60,110,.18);
+}
+.logo{
+  width:112px;height:112px;
+  margin:0 auto 24px;
+  border-radius:28px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:58px;
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+}
+h1{margin:0;font-size:42px;letter-spacing:2px}
+.subtitle{margin-top:12px;font-size:20px;opacity:.9;letter-spacing:1px}
+.container{max-width:900px;margin:34px auto;padding:0 18px}
+.card{
+  display:flex;
+  align-items:center;
+  width:100%;
+  min-height:122px;
+  margin:18px 0;
+  padding:22px 26px;
+  background:#fff;
+  border-radius:28px;
+  box-shadow:0 5px 20px rgba(28,55,90,.10);
+  text-decoration:none;
+  color:inherit;
+  transition:.2s;
+  border:1px solid #e8edf4;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 9px 26px rgba(28,55,90,.16)}
+.icon{
+  width:82px;height:82px;
+  flex:0 0 82px;
+  border-radius:24px;
+  background:#edf4ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:43px;
+  margin-right:24px;
+}
+.name{font-size:29px;font-weight:800}
+.desc{margin-top:7px;font-size:19px;color:#718096}
+.arrow{margin-left:auto;font-size:42px;color:#9aa8b7;font-weight:300}
+.footer{text-align:center;color:#8995a5;font-size:14px;padding:24px 10px 35px}
+.notice{
+  background:#fff8e8;
+  border:1px solid #f2d48a;
+  color:#725516;
+  padding:13px 16px;
+  border-radius:16px;
+  margin-bottom:20px;
+  font-size:15px;
+  line-height:1.6;
+}
+@media(max-width:600px){
+  .header{padding:30px 16px 36px;border-radius:0 0 32px 32px}
+  .logo{width:92px;height:92px;font-size:48px;margin-bottom:18px}
+  h1{font-size:32px}
+  .subtitle{font-size:16px}
+  .container{margin-top:24px;padding:0 14px}
+  .card{min-height:105px;padding:17px 16px;border-radius:23px}
+  .icon{width:68px;height:68px;flex-basis:68px;border-radius:20px;font-size:34px;margin-right:16px}
+  .name{font-size:23px}
+  .desc{font-size:16px}
+  .arrow{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">✈️</div>
+  <h1>EGAS 工作入口</h1>
+  <div class="subtitle">EGAS WORK PORTAL · WEB</div>
+</header>
+
+<main class="container">
+
+  <div class="notice">
+    🔐 <strong>系統連線提醒：</strong>
+    部分 EGAS 系統屬公司內部系統，若出現「401 Unauthorized」，
+    請確認已連接公司網路或 VPN。
+  </div>
+
+  <a class="card" href="https://egasweb.egas.com.tw/EGASDMAS" target="_blank" rel="noopener">
+    <div class="icon">📋</div>
+    <div>
+      <div class="name">DMAS</div>
+      <div class="desc">作業管理系統</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a class="card" href="#" onclick="notSet('EGAS FIS');return false;">
+    <div class="icon">✈️</div>
+    <div>
+      <div class="name">EGAS FIS</div>
+      <div class="desc">航班資訊系統</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a class="card" href="#" onclick="notSet('EEMS');return false;">
+    <div class="icon">📊</div>
+    <div>
+      <div class="name">EEMS</div>
+      <div class="desc">電子管理系統</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a class="card" href="#" onclick="notSet('人事系統');return false;">
+    <div class="icon">👤</div>
+    <div>
+      <div class="name">人事系統</div>
+      <div class="desc">EGAS Personnel</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a class="card" href="#" onclick="notSet('EGAS Cargo');return false;">
+    <div class="icon">📦</div>
+    <div>
+      <div class="name">EGAS Cargo</div>
+      <div class="desc">貨運相關系統</div>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+</main>
+
+<footer class="footer">
+  EGAS WORK PORTAL · Web Version
+</footer>
+
+<script>
+function notSet(name){
+  alert(name + " 的系統網址尚未設定。");
+}
+</script>
+</body>
+</html>
