@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b2d5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EGAS 工作入口">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>EGAS 工作入口</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",Arial,sans-serif;background:#f3f6fa;color:#152238}
+    header{background:linear-gradient(135deg,#0b2d5c,#164b8c);color:#fff;padding:32px 20px 26px;text-align:center;border-radius:0 0 28px 28px;box-shadow:0 5px 18px #0002}
+    .logo{width:68px;height:68px;margin:0 auto 12px;border-radius:20px;background:#fff;color:#0b2d5c;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800}
+    h1{margin:0;font-size:27px;letter-spacing:.5px}
+    .sub{margin-top:7px;opacity:.88;font-size:14px}
+    main{max-width:720px;margin:0 auto;padding:22px 16px 35px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    .card{display:flex;align-items:center;gap:15px;padding:17px 16px;background:#fff;border:1px solid #e3eaf2;border-radius:18px;text-decoration:none;color:inherit;box-shadow:0 3px 12px #17365d10;transition:.15s}
+    .card:active{transform:scale(.985)}
+    .ico{width:52px;height:52px;border-radius:15px;background:#eaf2ff;display:flex;align-items:center;justify-content:center;font-size:25px;flex:none}
+    .name{font-size:18px;font-weight:750}
+    .desc{font-size:13px;color:#718096;margin-top:3px}
+    .arrow{margin-left:auto;font-size:25px;color:#9aa8b8}
+    .hint{margin:18px 3px 0;padding:13px 14px;border-radius:14px;background:#fff8e6;color:#765c16;font-size:13px;line-height:1.55}
+    footer{text-align:center;color:#8a97a8;font-size:12px;margin-top:22px}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">✈</div>
+  <h1>EGAS 工作入口</h1>
+  <div class="sub">EGAS WORK PORTAL · V1.0</div>
+</header>
+
+<main>
+  <div class="grid">
+    <a class="card" href="https://egasweb.egas.com.tw/EGASDMAS" target="_self">
+      <div class="ico">📋</div><div><div class="name">DMAS</div><div class="desc">作業管理系統</div></div><div class="arrow">›</div>
+    </a>
+    <a class="card" href="https://egasweb.egas.com.tw/EGASFIS" target="_self">
+      <div class="ico">✈️</div><div><div class="name">EGAS FIS</div><div class="desc">航班資訊系統</div></div><div class="arrow">›</div>
+    </a>
+    <a class="card" href="https://eems.egas.com.tw/EGASEEMS" target="_self">
+      <div class="ico">📊</div><div><div class="name">EEMS</div><div class="desc">電子管理系統</div></div><div class="arrow">›</div>
+    </a>
+    <a class="card" href="https://degasehrms.egas.com.tw/EGASpersonnel/Login" target="_self">
+      <div class="ico">👤</div><div><div class="name">人事系統</div><div class="desc">EGAS Personnel</div></div><div class="arrow">›</div>
+    </a>
+    <a class="card" href="https://egasweb.egas.com.tw/egascgo" target="_self">
+      <div class="ico">📦</div><div><div class="name">EGAS Cargo</div><div class="desc">貨運系統</div></div><div class="arrow">›</div>
+    </a>
+  </div>
+  <div class="hint">💡 第一次使用：用手機瀏覽器開啟這個 App 網址後，可選「加入主畫面」，之後就能像一般 App 一樣使用。</div>
+  <footer>EGAS 工作入口 V1.0</footer>
+</main>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('service-worker.js').catch(()=>{});}</script></body>
+</html>
